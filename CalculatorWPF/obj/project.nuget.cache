@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "gODh/Ou+0Kl8hGX6aZrKSBgnEtZbyE9JHjEUpZKPY7YUiU+ZJFUP3Ax/FP98BbB9v78KyouHRiIV7S4iUc7+7A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\matib\\Desktop\\CalculatorWPF\\CalculatorWPF\\CalculatorWPF.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\matib\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.25\\microsoft.netcore.app.host.win-x64.3.1.25.nupkg.sha512"
+  ],
+  "logs": []
+}

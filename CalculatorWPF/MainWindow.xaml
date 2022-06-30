@@ -1,0 +1,97 @@
+﻿<Window x:Class="CalculatorWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CalculatorWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="500">
+
+    <Window.Resources>
+        <Style x:Key="TextboxStyle" TargetType="TextBox">
+            <Setter Property="Background" Value="Beige"/>
+            <Setter Property="Margin" Value="10,10,10,10"/>
+
+
+        </Style>
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="BorderThickness" Value="10"/>
+            <Setter Property="BorderBrush" Value="DarkSeaGreen"/>
+            <Setter Property="FontSize" Value="20"/>
+
+
+        </Style>
+    </Window.Resources>
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+           
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+     
+        </Grid.RowDefinitions>
+
+        
+
+        <DockPanel Grid.ColumnSpan="4" Background="Beige">
+            <Label x:Name="lastOperationLabel" DockPanel.Dock="Right" FontSize="15"/>
+            <DockPanel DockPanel.Dock="Left" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <TextBox x:Name="valueTextBox" FontSize="20" HorizontalAlignment="Left" Style="{StaticResource TextboxStyle}" ></TextBox>
+                <Label x:Name="firstOperationLabel" DockPanel.Dock="Top"/>
+            </DockPanel>
+        </DockPanel>
+
+        <!--BUTTONS -->
+
+        <Button Content="%" Grid.Column="0" Grid.Row="1" Style="{StaticResource ButtonStyle}" Click="PercentageButton"></Button>
+        <Button  Click="ClearFirstVar" Content="CE" Grid.Column="1" Grid.Row="1" Style="{StaticResource ButtonStyle}"></Button>
+        <Button Click="ClearAllVar" Content="C" Grid.Column="2" Grid.Row="1" Style="{StaticResource ButtonStyle}"></Button>
+        <Button FontFamily="Marlett" FontSize="20" Content="3" Grid.Column="3" Grid.Row="1" Style="{StaticResource ButtonStyle}" Click="BackDigitButton"></Button>
+        
+        <Button Content="1/x" Grid.Column="0" Grid.Row="2" Style="{StaticResource ButtonStyle}" Click="InverseButton"></Button>
+        <Button Content="x^2" Grid.Column="1" Grid.Row="2" Style="{StaticResource ButtonStyle}" Click="ExponentiationButton"></Button>
+        <Button Content="&#8730;" Grid.Column="2" Grid.Row="2" Style="{StaticResource ButtonStyle}" Click="SqrtButton"></Button>
+        <Button Click="DivideClick" Content="\" Grid.Column="3" Grid.Row="2" Style="{StaticResource ButtonStyle}"></Button>
+        
+        <Button Content="7" Grid.Column="0" Grid.Row="3" Style="{StaticResource ButtonStyle}" Click="ClickButton"></Button>
+        <Button Content="8" Grid.Column="1" Grid.Row="3" Style="{StaticResource ButtonStyle}" Click="ClickButton"></Button>
+        <Button Content ="9" Grid.Column="2" Grid.Row="3" Style="{StaticResource ButtonStyle}" Click="ClickButton"></Button>
+        <Button Click="MultiplyButton" Content ="X" Grid.Column="3" Grid.Row="3" Style="{StaticResource ButtonStyle}"></Button>
+        
+        <Button Content ="4" Grid.Column="0" Grid.Row="4" Style="{StaticResource ButtonStyle}" Click="ClickButton"></Button>
+        <Button Content ="5" Grid.Column="1" Grid.Row="4" Style="{StaticResource ButtonStyle}" Click="ClickButton"></Button>
+        <Button Content ="6" Grid.Column="2" Grid.Row="4" Style="{StaticResource ButtonStyle}" Click="ClickButton"></Button>
+        <Button Content ="-" Grid.Column="3" Grid.Row="4" Style="{StaticResource ButtonStyle}" Click="SubstractButton"></Button>
+
+        <Button Click="ClickButton" x:Name="button1" Content ="1" Grid.Column="0" Grid.Row="5" Style="{StaticResource ButtonStyle}"/>
+        <Button Content ="2" Grid.Column="1" Grid.Row="5" Style="{StaticResource ButtonStyle}" Click="ClickButton"></Button>
+        <Button Content ="3" Grid.Column="2" Grid.Row="5" Style="{StaticResource ButtonStyle}" Click="ClickButton"></Button>
+        <Button Click="ClickSumButton" Content ="+" Grid.Column="3" Grid.Row="5" Style="{StaticResource ButtonStyle}"></Button>
+        
+        <Button Content ="+/-" Grid.Column="0" Grid.Row="6" Style="{StaticResource ButtonStyle}" Click="ChangeDirectionButton"></Button>
+        <Button Click="ClickButton" Content ="0" Grid.Column="1" Grid.Row="6" Style="{StaticResource ButtonStyle}"></Button>
+        <Button Click="ClickButton" Content ="." Grid.Column="2" Grid.Row="6" Style="{StaticResource ButtonStyle}"></Button>
+        <Button Click="EqualsClick" Content ="=" Grid.Column="3" Grid.Row="6" Style="{StaticResource ButtonStyle}"></Button>
+
+        <Button Content="MOD" Grid.Column="0" Grid.Row="7" Style="{StaticResource ButtonStyle}" Click="ModOperationButton"></Button>
+
+        <Button Content="R UP" Grid.Column="1" Grid.Row="7" Style="{StaticResource ButtonStyle}" Click="RoundUpButton"></Button>
+        <Button Content="R DOWN" Grid.Column="2" Grid.Row="7" Style="{StaticResource ButtonStyle}" Click="RoundDownButton"></Button>
+        <Button Content="LOG10" Grid.Column="3" Grid.Row="7" Style="{StaticResource ButtonStyle}" Click="LogButton" ></Button>
+
+
+
+    </Grid>
+</Window>
